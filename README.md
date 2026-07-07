@@ -28,21 +28,17 @@ Everything is in `index.html`. Common tweaks:
 ## Contact form
 
 The form uses [FormSubmit](https://formsubmit.co) — a free service that forwards
-submissions to your email, with no account or backend needed.
-
-**One-time activation:** the first time someone submits the form (or you submit a
-test yourself), FormSubmit emails `daniel@komputernerd.com` asking you to confirm
-the address. Click the link once and the form is live from then on.
-
-To change the destination, edit the form `action` in `index.html`:
+submissions to your email, with no account or backend needed. It's already
+**activated**, and the form `action` uses FormSubmit's hashed endpoint (rather
+than the naked email address) so the address isn't exposed in the page source:
 
 ```html
-<form action="https://formsubmit.co/YOUR-EMAIL" method="POST">
+<form action="https://formsubmit.co/<hash>" method="POST">
 ```
 
-> Tip: after activation you can replace your email in the `action` with the
-> random hash string FormSubmit gives you, so your address isn't visible in the
-> page source.
+To point it at a different inbox, generate a new hash for that address from the
+FormSubmit dashboard (or use the plain `https://formsubmit.co/YOUR-EMAIL` form,
+which re-triggers a one-time confirmation email).
 
 ## Deployment
 
