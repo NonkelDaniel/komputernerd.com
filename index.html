@@ -109,60 +109,6 @@
     }
     .trusted .sep { color: var(--line); font-weight: 400; opacity: 1; }
 
-    /* Contact form */
-    form {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 1.5rem;
-    }
-    .field { margin-bottom: 1rem; }
-    .field:last-of-type { margin-bottom: 1.25rem; }
-    label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-    input, textarea {
-      width: 100%;
-      font: inherit;
-      font-size: 0.98rem;
-      color: var(--fg);
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      padding: 0.7rem 0.8rem;
-      transition: border-color 0.15s ease;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-    textarea { resize: vertical; min-height: 120px; }
-    button {
-      width: 100%;
-      font: inherit;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--bg);
-      background: var(--accent);
-      border: none;
-      border-radius: 9px;
-      padding: 0.85rem 1rem;
-      cursor: pointer;
-      transition: opacity 0.15s ease;
-    }
-    button:hover { opacity: 0.85; }
-    /* Honeypot */
-    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-
-    .direct {
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
     a { color: inherit; }
 
     /* Footer */
@@ -214,37 +160,6 @@
       </div>
     </section>
 
-    <section aria-labelledby="contact-label">
-      <p class="section-label" id="contact-label">Get in touch</p>
-      <form action="https://formsubmit.co/a77471146b432b1877a85ddb25940627" method="POST">
-        <!-- FormSubmit config -->
-        <input type="hidden" name="_subject" value="New enquiry via komputernerd.com" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_next" value="https://komputernerd.com/thanks.html" />
-        <!-- Honeypot: bots fill this, humans don't -->
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
-        </div>
-        <div class="field">
-          <label for="message">How can I help?</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit">Send message</button>
-      </form>
-      <p class="direct">
-        Or email me directly at
-        <a href="mailto:daniel@komputernerd.com">daniel@komputernerd.com</a>
-      </p>
-    </section>
-
     <footer>
       <a class="social" href="https://be.linkedin.com/in/daniel-mir-heydari-7a5901107" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
@@ -252,6 +167,7 @@
       </a>
       <div class="name">Komputernerd BV</div>
       <div>Tuinstraat 7, 9031 Gent (Drongen), Belgium</div>
+      <div><a href="mailto:daniel@komputernerd.com">daniel@komputernerd.com</a></div>
       <div>&copy; <span id="year">2026</span> Komputernerd BV — All rights reserved.</div>
     </footer>
   </main>
