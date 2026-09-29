@@ -64,50 +64,28 @@
       height: auto;
       filter: invert(var(--logo-invert));
     }
-    .tagline {
-      margin: 1.75rem auto 0;
-      max-width: 46ch;
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
-    .kicker {
-      display: inline-block;
-      margin-top: 0.25rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* Sections */
-    section { margin-top: 3.5rem; }
-    .section-label {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-align: center;
-      margin: 0 0 1.5rem;
-    }
-
-    /* Trusted by */
-    .trusted {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 0.75rem 1.75rem;
-    }
-    .trusted span {
+    .headline {
+      margin: 1.75rem 0 0;
+      font-size: clamp(1.5rem, 5vw, 1.9rem);
       font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-      color: var(--fg);
-      opacity: 0.78;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
     }
-    .trusted .sep { color: var(--line); font-weight: 400; opacity: 1; }
+    .role {
+      margin: 0.5rem 0 0;
+      font-size: 1.05rem;
+      color: var(--fg);
+    }
+    .focus {
+      margin: 1.25rem auto 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 2;
+    }
+    .focus span { white-space: nowrap; }
 
     a { color: inherit; }
 
@@ -140,25 +118,13 @@
   <main class="wrap">
     <header>
       <img class="logo" src="assets/logo.png" alt="Komputernerd" width="760" height="467" />
-      <p class="tagline">
-        Independent computer consultancy. Software engineering for teams
-        building at scale — LLM agent platforms, mobile, and product engineering.
+      <h1 class="headline">Daniel Mir Heydari</h1>
+      <p class="role">Software &amp; AI Technology Expert</p>
+      <p class="focus">
+        <span>Technical Leadership</span> · <span>Architecture</span> · <span>Agentic Systems</span><br />
+        <span>Product Engineering</span> · <span>Platforms</span> · <span>Engineering Organisation</span>
       </p>
-      <span class="kicker">Daniel Mir Heydari</span>
     </header>
-
-    <section aria-labelledby="trusted-label">
-      <p class="section-label" id="trusted-label">Trusted by</p>
-      <div class="trusted">
-        <span>Deliverect</span>
-        <span class="sep">/</span>
-        <span>Donna</span>
-        <span class="sep">/</span>
-        <span>Bridge&nbsp;Social</span>
-        <span class="sep">/</span>
-        <span>Voka</span>
-      </div>
-    </section>
 
     <footer>
       <a class="social" href="https://be.linkedin.com/in/daniel-mir-heydari-7a5901107" target="_blank" rel="noopener noreferrer">
